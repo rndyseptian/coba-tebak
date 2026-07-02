@@ -526,28 +526,6 @@ window.addEventListener("scroll",()=>{
 
 
 // =======================================================
-// PARALLAX IMAGES
-// =======================================================
-
-window.addEventListener("scroll",()=>{
-
-    const photos=
-    document.querySelectorAll(".photo img");
-
-    photos.forEach(photo=>{
-
-        const speed=.08;
-
-        photo.style.transform=
-
-        `translateY(${window.scrollY*speed}px)`;
-
-    });
-
-});
-
-
-// =======================================================
 // CELEBRATE MODE
 // =======================================================
 
