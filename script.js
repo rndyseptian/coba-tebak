@@ -265,20 +265,21 @@ window.addEventListener("scroll",()=>{
 
 
 // =======================================================
-// IMAGE HOVER REVEAL
+// IMAGE REVEAL (FIX)
 // =======================================================
 
-const images=document.querySelectorAll("img");
+const revealImages = document.querySelectorAll(
+    ".gallery-story img, .image-full img"
+);
 
-const observer=new IntersectionObserver(entries=>{
+const imageObserver = new IntersectionObserver(entries => {
 
-    entries.forEach(entry=>{
+    entries.forEach(entry => {
 
         if(entry.isIntersecting){
 
-            entry.target.style.opacity="1";
-
-            entry.target.style.transform="translateY(0)";
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "scale(1)";
 
         }
 
@@ -286,15 +287,13 @@ const observer=new IntersectionObserver(entries=>{
 
 });
 
-images.forEach(img=>{
+revealImages.forEach(img => {
 
-    img.style.opacity="0";
+    img.style.opacity = "0";
+    img.style.transform = "scale(.95)";
+    img.style.transition = ".6s";
 
-    img.style.transform="translateY(50px)";
-
-    img.style.transition=".9s";
-
-    observer.observe(img);
+    imageObserver.observe(img);
 
 });
 
