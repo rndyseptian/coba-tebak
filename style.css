@@ -725,6 +725,98 @@ section{
 }
 
 /* ================================================= */
+/* GALLERY STORY */
+/* ================================================= */
+
+.gallery-story{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.gallery-story img{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    transition:.45s;
+
+    cursor:pointer;
+
+}
+
+.gallery-story img:hover{
+
+    transform:
+
+    translateY(-12px)
+
+    scale(1.04);
+
+    box-shadow:
+
+    0 25px 45px
+
+    rgba(255,79,135,.25);
+
+}
+
+/* ================================================= */
+/* POLAROID GALLERY */
+/* ================================================= */
+
+.polaroid-gallery{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:45px;
+
+    flex-wrap:wrap;
+
+}
+
+.polaroid-gallery .photo:nth-child(1){
+
+    transform:rotate(-6deg);
+
+}
+
+.polaroid-gallery .photo:nth-child(2){
+
+    transform:rotate(3deg);
+
+}
+
+.polaroid-gallery .photo:nth-child(3){
+
+    transform:rotate(-2deg);
+
+}
+
+.polaroid-gallery .photo:hover{
+
+    transform:
+
+    rotate(0deg)
+
+    scale(1.06);
+
+}
+
+/* ================================================= */
 /* GLOW */
 /* ================================================= */
 
